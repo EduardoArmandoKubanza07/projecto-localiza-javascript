@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../icons/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="../css/_account.css">
+    <script src="../javascript/_account.js" defer></script>
+    <title> Loczaliza - Criar conta </title>
+</head>
+<body>
+    <main class="container">
+        <section id="first-content">
+            <h1> Criar conta </h1>
+            <form action="#" id="account-form">
+                <div class="div">
+                    <input type="text" id="full-name" placeholder="Nome completo" required>
+                </div>
+                <div class="div">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div id="gender-box">
+                    <select id="gender">
+                        <option value="Masculino"> Masculino</option>
+                        <option value="Feminino"> Feminino </option>
+                        <option value="Neutro"> Neutro </option>
+                    </select>
+                </div>
+                <div class="div">
+                    <input type="number" id="age" placeholder="Ano de nasimento" min="1900" max="2023" required>
+                </div>
+                <div id="image-box">
+                    <div id="image-name"> Seleccione uma fotografia </div>
+                    <input type="file" id="image" accept="image/*">
+                    <label for="image">
+                        <i class="fas fa-camera" title="Seleccionar imagem"></i>
+                    </label>
+                </div>
+                <div class="div">
+                    <input type="password" id="password" placeholder="Senha" minlength="6" required>
+                    <i class="fas fa-eye" id="seePassword"></i>
+                </div>
+                <div class="div">    
+                    <input type="password" id="confirmPassword" placeholder="Confirmar senha" minlength="6" required>
+                    <i class="fas fa-eye" id="seeConfirmPassword"></i>
+                </div>
+                <button> Cadastrar </button>
+                <p>
+                    Já possui uma conta?
+                    <a href="_login.html"> Entrar </a>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

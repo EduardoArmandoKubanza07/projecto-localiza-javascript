@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../icons/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="../css/_main.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <script src="../javascript/_main.js" defer></script>
+    <script src="../javascript/_main_theme.js" defer></script>
+    <script src="../javascript/search-filter.js" defer></script>
+    <title> Localiza - Início </title>
+</head>
+    <div>
+        <img src="../images/top.png" alt="Topo" class="elevator" title="Voltar ao topo">
+    <div>
+    <div class="filter-modal hide"></div>
+    <div class="filter hide ">
+        <div class="header">
+            <img src="../images/logo.png" alt="Localiza" class="logo">
+            <button id="filter-close-btn">
+                <i class="fas fa-close"></i>
+            </button>
+        </div>
+        <div class="content">
+            <ul>
+            </ul>
+            <div id="details">
+                <div class="header">
+                    <img src="../images/logo.png" alt="Localiza" class="logo">
+                    <button id="close"> <i class="fas fa-close"></i></button>
+                </div>
+                <div class="content">
+                    <div class="det"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-details-modal hide"></div>
+    <div class="search-result-details hide">
+        <div class="header">
+            <img src="../images/logo.png" alt="Localiza" class="logo">
+            <button id="close"> <i class="fas fa-close"></i></button>
+        </div>
+        <div class="content">
+        </div>
+    </div>
+    <div class="hidden"></div>
+
+    <header class="app-header">
+        <div class="nav-left">
+            <img src="../images/logo.png" alt="Localiza" class="logo">
+            <img src="../images/GPS.png" alt="Localiza" class="logo-icon">
+            <nav class="nav-bar">
+                <ul>
+                    <li id="home"> <i class="fas fa-home" title="Início"></i></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" class="search-input" placeholder="Buscar no Localiza">
+            </div>
+            <div class="search-result">
+                <ul id="results"> </ul>
+            </div>
+            <i class="fas fa-search" id="open-search-box" title="Abrir caixa de pesquisa"></i>
+            <div class="profile-img online" onclick="openConfigMenu()">
+                <img src="" class="user-avatar">
+            </div>
+        </div>
+        <div class="settings-menu">
+            <div class="header">
+                <div>
+                    <p class="user-profile-name user-name"> Eduardo Armando Kubanza </p>
+                    <small class="user-profile-email user-email"> eduardokubanza9@gmail.com</small>
+                </div>
+                <div id="dark-btn">
+                    <span></span>
+                </div>
+            </div>
+            <hr>
+            <div class="settings-links">
+                <ul>
+                    <!-- <li>
+                        <a href="_profile.html"> <i class="far fa-user"></i>  Perfil </a>
+                    </li> -->
+                    <li>
+                        <a href="#" id="out"> <i class="fas fa-lock"></i> Sair </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Zona de achados-->
+    <div class="achados-form-modal hide"></div>
+    <div class="achados-form hide">
+        <div class="header">
+            <h2> Cadastrar achados </h2>
+            <button id="achados-form-close"> <i class="fas fa-close"></i></button>
+        </div>
+        <form id="form-achados">
+            <input type="text" id="achado-name" placeholder="Nome do achado " required>
+            <textarea  id="achado-description" placeholder="Detalhes do achado" required></textarea>
+            <input type="number" id="achado-age" placeholder="Ano de nascimento" min="1900" max="2023" required>
+            <select id="achado-gender">
+                <option value="Masculino"> Masculino </option>
+                <option value="Feminino"> Feminino </option>
+                <option value="Neutro"> Neutro </option>
+            </select>
+            <div id="img-zone">
+                <div id="achado-img-name"> Imagem do achado </div>
+                <input type="file" id="achado-img" accept="image/*">
+                <label for="achado-img"> <i class="fas fa-camera" title="Seleccionar imagem" aria-required="true"></i> </label>
+            </div>
+            <h2> Contactos do responsável </h2>
+            <input type="text" id="achado-contact" placeholder="Email ou telemóvel" required>
+            <input type="text" id="achado-adress" placeholder="Morada" required>
+            <button type="submit"> Cadastrar </button>
+        </form>
+    </div>
+    <div class="achados-modal hide"></div>
+    <div class="achados hide">
+        <div class="header">
+            <img src="../images/logo.png" alt="Localiza" class="logo">
+            <button title="Fechar" id="achados-close"> <i class="fas fa-close"></i></button>
+        </div>
+        <div class="achados-search-box">
+            <i class="fas fa-search"></i>
+            <input type="search" id="achados-search" oninput="searchAchados()" placeholder="Buscar por achados">
+        </div>
+        <div class="achados-content">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <main class="container" id="top">
+        <div class="left-sidebar">
+            <h2 class="title"> Buscas por categorias </h2>
+            <hr>
+            <h2 id="zone-des"> Zona de desaparecidos </h2>
+            <button id="mans" title="Clica para mais opções"> Homens</button>
+            <ul id="man-ul" class="hide">
+                <li id="man-child"> Crianças </li>
+                <li id="man-young"> Jovens </li>
+                <li id="man-adult"> Adultos  </li>
+            </ul>
+            <button id="womans" title="Clica para mais opções">  Mulheres </button>
+            <ul id="woman-ul" class="hide">
+                <li id="woman-child"> Crianças </li>
+                <li id="woman-young"> Jovens </li>
+                <li id="woman-adult"> Adultos </li>
+            </ul>
+
+            <h2 id="achados"> Zona de achados </h2>
+                <button id="achados-open"> Achados </button>
+                <button id="achados-form-open"> Cadastrar </button>
+        </div>
+        <div class="main-content">
+            <div id="post-card">
+                <img src="" class="user-avatar">
+                <input type="text" placeholder="Postar desaparecidos" id="poster">
+            </div>
+            <div class="posts-container">
+              
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <h2 class="title"> Notificações recentes </h2>
+            <hr>
+            <ul id="notifications"> </ul>
+        </div>
+    </main>
+
+    <div class="post-modal hide"></div>
+    <div class="post-section hide">
+        <div class="header">
+            <h2> Postar desaparecidos </h2>
+            <button id="post-close-btn"> <i class="fas fa-close"></i></button>
+        </div>     
+        <form class="post-content">
+            <input type="text" id="post-name" placeholder="Nome do desaparecido" required>
+            <textarea id="post-description" placeholder="Detahes do desaparecido " required></textarea> 
+            <input type="number" id="age" min="1900"  placeholder="Ano de nascimento" required>
+            <select id="gender">
+                <option value="Masculino"> Masculino </option>
+                <option value="Feminino">Feminino</option>
+            </select>
+            <div id="post-image-section">
+                <div id="post-img-name"> Imagem do desaparecido </div>
+                <input type="file" id="post-img" accept="image/*">
+                <label for="post-img"> <i class="fas fa-camera" title="Seleccionar imagem" aria-required="true"></i></label>
+            </div>
+            <div class="post-contacts-section">
+                <h3> Contactos do responsável </h3>
+                <input type="tel" id="post-contact" placeholder="Telemóvel ou e-mail" required>
+                <input type="text" id="post-location" placeholder="Morada" required>
+            </div>
+            <button id="post-btn" type="submit">  Publicar </button>      
+        </form>
+    <div>
+</body>
+</html>

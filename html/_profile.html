@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../icons/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="../css/_profile.css">
+    <script src="../javascript/_profile.js" defer> </script>
+    <script src="../javascript/_main_theme.js" defer></script>
+    <title> Localiza - Perfil </title>
+</head>
+<body>
+    <header class="app-header">
+        <div class="nav-left">
+            <img src="../images/logo.png" alt="Localiza" class="logo">
+        </div>
+        <div class="nav-right">
+            <div class="profile-img online">
+                <img src="../images/user.jpg" class="user-avatar" onclick="openConfigMenu()">
+            </div>
+        </div>
+        <div class="settings-menu">
+            <div class="header">
+                <div>
+                    <p class="user-profile-name user-name"> Eduardo Armando Kubanza </p>
+                    <small class="user-profile-email user-email"> eduardokubanza9@gmail.com</small>
+                </div>
+                <div id="dark-btn">
+                    <span></span>
+                </div>
+            </div>
+            <hr>
+            <div class="settings-links">
+                <ul>
+                    <li>
+                        <a href="#"> <i class="far fa-user"></i>  Perfil </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fas fa-gear"></i> Definições </a>
+                    </li>
+                    <li>
+                        <a href="#" id="out"> <i class="fas fa-lock"></i> Sair </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="cap-section">
+            <img src="../images/_gps.jpg" id="cap-img" class="">
+            <img src="../images/user.jpg" id="profile-img" class="user-avatar">
+        </div>
+        <div class="btns-bar">
+            <button id="edit-profile" title="Editar suas informações de perfil "> Editar perfil </button>
+        </div>
+    </main>
+</body>
+</html>

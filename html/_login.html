@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../icons/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="../css/_login.css">
+    <script src="../javascript/_login.js" defer></script>
+    <title> Localiaza - Entrar  </title>
+</head>
+<body > 
+    <section class="login-container">
+        <div class="first-content">
+            <h2 class="title"> Seja bem-vindo!</h2>
+            <p class="description"> Se não possui uma conta , clica no botão abaixo para criar um conta. </p>
+            <a href="_account.html">
+                <button class="btn" id="open-account-box"> Criar conta </button>
+            </a>
+        </div>
+
+        <div class="second-content">
+            <h2 class="title"> Iniciar sessão </h2>
+            <p class="description"> Introduza os seus dados para iniciar sessão </p>
+            <form action="#" class="login-form" id="login"  autocomplete="off">
+                <div id="email-box">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" id="email" class="input" placeholder="Email" required>
+                </div>
+                <div id="password-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" class="input" placeholder="Senha" required minlength="6">
+                    <i class="fas fa-eye" id="visible"></i>
+                </div>
+                <button class="btn" id="login-btn" > Entrar </button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

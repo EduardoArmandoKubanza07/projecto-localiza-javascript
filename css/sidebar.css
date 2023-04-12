@@ -1,0 +1,345 @@
+@charset "utf-8";
+/* Todas as variáveis */
+:root {
+    --localiza: #03aaff;
+    --font-color: #15192c;
+    --header-background: #fff;
+    --global-background: #f5f5f5;
+    --input-color: #e5e5e5;
+    --white: #ffffff;
+    --black: #000;
+    --size: 1rem;
+}
+.dark-theme {
+    --global-background: #202335;
+    --header-background: #42414d;
+    --font-color: #ffffff;
+}
+.left-sidebar , .right-sidebar{
+    background-color: var(--header-background);
+    height: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+.left-sidebar {
+    margin-top: 1rem;
+}
+.left-sidebar .title , .right-sidebar .title{
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: 550;
+    text-transform: capitalize;
+    color: var(--localiza);
+    
+}
+.left-sidebar h3 {
+    font-size: 1.3rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.left-sidebar ul {
+    list-style: none;
+    margin-left: .5rem;
+}
+
+#man-ul.hide , #woman-ul.hide {
+    display: none;
+}
+.left-sidebar #zone-des {
+    color: var(--localiza);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: .6rem;
+    margin-bottom: .7rem;
+}
+.left-sidebar #achados {
+    color: var(--localiza);
+    font-size: 1.5rem;
+    font-weight: 550;
+    margin-top: 1rem;
+    margin-bottom: .7rem;
+}
+.left-sidebar button {
+    display: block;
+    margin-bottom: .7rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    background-color: transparent ;
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 100%;
+    padding: .3rem.2rem;
+    text-align: left;
+    border-radius: .5rem;
+}
+.left-sidebar button:hover{
+    background-color: var(--global-background);
+}
+.left-sidebar ul li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    padding: .4rem .6rem;
+    border-radius: .5rem;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.left-sidebar ul li:last-child {
+    margin-bottom: 0;
+}
+.left-sidebar ul li:hover {
+    background-color: var(--global-background);
+}
+.achados-modal , .achados-form-modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 15;
+    animation: visibility 1s ease-in-out forwards;
+}
+.achados  {
+    width: 27rem;
+    height: auto;
+    max-height: 80%;
+    padding: 0 2rem;
+    background-color: var(--header-background);
+    border-radius: .5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 25;
+    animation: visibility 1s ease-in-out forwards;
+}
+.achados-modal.hide , .achados.hide , .achados-form-modal.hide , .achados-form.hide {
+    display: none;
+}
+.achados .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -4.3rem;
+}
+.achados .header .logo {
+    width: 12rem;
+}
+.achados .header button , .achados-form .header button{
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.achados .header button i , .achados-form .header button i {
+    font-size: 1.4rem;
+}
+.achados-search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--input-color);
+    width: 85%;
+    height: 2.5rem;
+    margin-left: 15%;
+    margin-top: -3.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 0 1rem;
+}
+.achados-search-box button i {
+    color: #868686;
+    font-weight: bold;
+}
+.dark-theme .achados-search-box i {
+    color: grey;
+}
+.achados-search-box input {
+    width: 100%;
+    outline: none;
+    height: 100%;
+    background-color: transparent;
+    padding-left: .5rem;
+}
+.dark-theme .achados-search-box input{
+    color: #000;
+}
+.achados-content ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+.achados-content ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: .5rem;
+    padding: .7rem;
+    border-bottom: 2px solid var(--input-color);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.achados-content ul li:last-child {
+    border-bottom: none;
+}
+.achados-content ul li img {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-right: 1rem;
+}
+.achados-content legend {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+.achados-form .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 ;
+}
+.achados-form .header h2 {
+    color: var(--localiza);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.achados-form {
+    width: 25rem;
+    height: auto;
+    padding: 0 2rem;
+    background-color: var(--header-background);
+    border-radius: .5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 25;
+    animation: visibility 1s ease-in-out forwards;
+}
+.achados-form form {
+    width: 100%;
+}
+.achados-form form input {
+    width: 100%;
+    background-color: var(--input-color);
+    margin-bottom: .5rem;
+    outline: none;
+    padding: .5rem 1rem ;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 2px solid var(--input-color);
+    transition: all .3s ease-in-out;
+}
+.achados-form form input:focus {
+    border-color: var(--localiza);
+}
+.achados-form form textarea {
+    resize: none;
+    padding: 1rem;
+    background-color: var(--input-color);
+    width: 100%;
+    height: 5rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 2px solid var(--input-color);
+    outline: none;
+    transition: all .5s ease-in-out;
+    resize: none;
+}
+.achados-form form select {
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+    color: var(--localiza);
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.achados-form form select option {
+    background-color: var(--global-background);
+}
+.achados-form form #img-zone {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--input-color);
+    padding: .5rem  1rem;
+    border-radius: .5rem;
+}
+#achado-img {
+    display: none;
+}
+.achados-form label i {
+    color: var(--localiza);
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.achados-form form h2 {
+    color: var(--localiza);
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+}
+.achados-form form textarea:focus{
+    border-color: var(--localiza);
+}
+.achados-form form button {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--localiza);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding:  .5rem 0;
+    border: 1px solid var(--localiza);
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.achados-form form button:hover {
+    background-color: var(--white);
+    color: var(--localiza);
+}
+
+.right-sidebar  {
+    max-width: 50rem;
+    margin-top: 1rem
+}
+#notifications {
+    margin-top: 1rem;
+}
+#notifications li  {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--input-color);
+    transition: all .5s ease-in-out;
+}
+#notifications li:last-child {
+    border-bottom: none;
+}
+#notifications li img {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    min-width: 3.3rem;
+}
+#notifications a {
+    text-decoration: none;
+}
+#notifications li a span {
+    font-weight: 700;
+}
